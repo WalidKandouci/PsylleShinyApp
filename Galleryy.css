@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Playfair Display", serif;
+}
+
+h1, p, a {
+  color: #000000;
+}
+
+h1 {
+  font-family: "Pacifico", cursive;
+  font-size: 54px;
+  font-weight: normal;
+}
+
+header {
+  margin-bottom: 20px;
+}
+
+footer {
+  margin-top: 20px;
+}
+
+#site {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+#gallery {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto;
+}
+#gallery .gallery-element {
+  grid-column: span 2;
+  overflow: hidden;
+  height: 250px;
+  color: #333;
+  text-decoration: none;
+  display: grid;
+  background-position: center;
+  background-size: cover;
+  transition: transform 0.5s;
+}
+#gallery .gallery-element h2 {
+  margin: 0;
+  padding: 30px;
+  font-size: 1.6em;
+  background: rgba(255, 255, 255, 0.75);
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+#gallery .gallery-element:hover {
+  transform: scale(1.05);
+}
+#gallery .gallery-element:hover h2 {
+  opacity: 1;
+}
+
+@media screen and (max-width: 850px) and (min-width: 500px) {
+  #gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media screen and (max-width: 500px) {
+  #gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}
