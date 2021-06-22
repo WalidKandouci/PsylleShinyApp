@@ -17,17 +17,17 @@ library(sass)
 #*******************************************************************************
 # Datasets
 # Data Meteo Fr
-Data_ALLMeteo_Montpellier <- read_csv2("Data_ALLMeteo_Montpellier.csv")
+Data_ALLMeteo_Montpellier <- read_csv2("C:/Users/Walid/Documents/GitHub/PsylleShinyApp/dataMeteo/Montpellier/Data_ALLMeteo_Montpellier.csv")
 Data_ALLMeteo_Montpellier$temperature <- as.numeric(Data_ALLMeteo_Montpellier$temperature)
 Data_ALLMeteo_Montpellier$humidity <- as.numeric(Data_ALLMeteo_Montpellier$humidity)
 Data_ALLMeteo_Montpellier$ID <- as.numeric(Data_ALLMeteo_Montpellier$ID)
 
-Data_ALLMeteo_Montpellier_mean <- read_csv2("Data_ALLMeteo_Montpellier_mean.csv")
+Data_ALLMeteo_Montpellier_mean <- read_csv2("C:/Users/Walid/Documents/GitHub/PsylleShinyApp/dataMeteo/Montpellier/Data_ALLMeteo_Montpellier_mean.csv")
 Data_ALLMeteo_Montpellier_mean$temperature <- as.numeric(Data_ALLMeteo_Montpellier_mean$temperature)
 Data_ALLMeteo_Montpellier_mean$humidity <- as.numeric(Data_ALLMeteo_Montpellier_mean$humidity)
 Data_ALLMeteo_Montpellier_mean$ID <- as.numeric(Data_ALLMeteo_Montpellier_mean$ID)
 
-Data_ALLMeteo_Montpellier_mean_plot <- read_csv2("Data_ALLMeteo_Montpellier_mean_plot.csv")
+Data_ALLMeteo_Montpellier_mean_plot <- read_csv2("C:/Users/Walid/Documents/GitHub/PsylleShinyApp/dataMeteo/Montpellier/Data_ALLMeteo_Montpellier_mean_plot.csv")
 Data_ALLMeteo_Montpellier_mean_plot$temperature <- as.numeric(Data_ALLMeteo_Montpellier_mean_plot$temperature)
 Data_ALLMeteo_Montpellier_mean_plot$humidity <- as.numeric(Data_ALLMeteo_Montpellier_mean_plot$humidity)
 Data_ALLMeteo_Montpellier_mean_plot$ID <- as.numeric(Data_ALLMeteo_Montpellier_mean_plot$ID)
@@ -99,73 +99,26 @@ Data_Meteo_Montpellier_mean_2019_plot <- Data_ALLMeteo_Montpellier_mean_plot[Dat
 Data_Meteo_Montpellier_mean_2020_plot <- Data_ALLMeteo_Montpellier_mean_plot[Data_ALLMeteo_Montpellier_mean_plot$ID==2020,c(-1)]
 #*******************************************************************************
 # Data 2005
-Data_semaineA1   <-
-    as.data.frame(read_excel("Data_2005_Comptage_1A.xlsx", na = "NA"))
-Data_semaineAB   <-
-    as.data.frame(read_excel("Data_2005_Comptage_1B.xlsx", na = "NA"))
-Data_semaine23   <-
-    as.data.frame(read_excel("Data_2005_Comptage_2,3.xlsx", na = "NA"))
-Data_semaine24   <-
-    as.data.frame(read_excel("Data_2005_Comptage_2,4.xlsx", na = "NA"))
-Data_semaine31   <-
-    as.data.frame(read_excel("Data_2005_Comptage_3,1.xlsx", na = "NA"))
-Data_semaine32   <-
-    as.data.frame(read_excel("Data_2005_Comptage_3,2.xlsx", na = "NA"))
-Data_semaine33   <-
-    as.data.frame(read_excel("Data_2005_Comptage_3,3.xlsx", na = "NA"))
-Data_semaine41   <-
-    as.data.frame(read_excel("Data_2005_Comptage_4,1.xlsx", na = "NA"))
-Data_semaine42A  <-
-    as.data.frame(read_excel("Data_2005_Comptage_4,2A.xlsx", na = "NA"))
-Data_semaine42B  <-
-    as.data.frame(read_excel("Data_2005_Comptage_4,2B.xlsx", na = "NA"))
-Data_semaine43A  <-
-    as.data.frame(read_excel("Data_2005_Comptage_4,3A.xlsx", na = "NA"))
-Data_semaine43B  <-
-    as.data.frame(read_excel("Data_2005_Comptage_4,3B.xlsx", na = "NA"))
-Data_semaine51   <-
-    as.data.frame(read_excel("Data_2005_Comptage_5,1.xlsx", na = "NA"))
-Data_semaine52   <-
-    as.data.frame(read_excel("Data_2005_Comptage_5,2.xlsx", na = "NA"))
-Data_semaine53   <-
-    as.data.frame(read_excel("Data_2005_Comptage_5,3.xlsx", na = "NA"))
-Data_semaine61   <-
-    as.data.frame(read_excel("Data_2005_Comptage_6,1.xlsx", na = "NA"))
-Data_semaine62   <-
-    as.data.frame(read_excel("Data_2005_Comptage_6,2.xlsx", na = "NA"))
-Data_semaine63   <-
-    as.data.frame(read_excel("Data_2005_Comptage_6,3.xlsx", na = "NA"))
-Data_semaine71   <-
-    as.data.frame(read_excel("Data_2005_Comptage_7,1.xlsx", na = "NA"))
-Data_semaine72A  <-
-    as.data.frame(read_excel("Data_2005_Comptage_7,2A.xlsx", na = "NA"))
-Data_semaine72B  <-
-    as.data.frame(read_excel("Data_2005_Comptage_7,2B.xlsx", na = "NA"))
-Data_semaine81   <-
-    as.data.frame(read_excel("Data_2005_Comptage_8,1.xlsx", na = "NA"))
-Data_semaine82   <-
-    as.data.frame(read_excel("Data_2005_Comptage_8,2.xlsx", na = "NA"))
-Data_semaine91   <-
-    as.data.frame(read_excel("Data_2005_Comptage_9,1.xlsx", na = "NA"))
-Data_semaine92   <-
-    as.data.frame(read_excel("Data_2005_Comptage_9,2.xlsx", na = "NA"))
-Data_semaine101  <-
-    as.data.frame(read_excel("Data_2005_Comptage_10,1.xlsx", na = "NA"))
-Data_semaine102B <-
-    as.data.frame(read_excel("Data_2005_Comptage_10,2B.xlsx", na = "NA"))
-Data_semaine112  <-
-    as.data.frame(read_excel("Data_2005_Comptage_11,2.xlsx", na = "NA"))
-Data_semaine121  <-
-    as.data.frame(read_excel("Data_2005_Comptage_12,2.xlsx", na = "NA"))
-Data_semaine122  <-
-    as.data.frame(read_excel("Data_2005_Comptage_12,2.xlsx", na = "NA"))
-Data_semaine131  <-
-    as.data.frame(read_excel("Data_2005_Comptage_13,3.xlsx", na = "NA"))
+dataLab <- as.data.frame(read_csv("C:/Users/Walid/Documents/GitHub/PsylleShinyApp/dataPlant/dataLab.csv"))[,-1]
 #*******************************************************************************
 # Data field
-Data_terrain <- as.data.frame(read_csv("Data_terrain.csv"))
-Data_terrain_toplotly <- read.csv("Data_terrrain_toplotly.csv")
-Data_terrain_toplotly <- Data_terrain_toplotly[, -1]
+
+dataField <- as.data.frame(read_csv("C:/Users/Walid/Documents/GitHub/PsylleShinyApp/dataField/dataField.csv"))[,-1]
+dataFieldIM   <- dataField[,-3]
+dataFieldREIM <- dataField[,-2]
+dataFieldIM[,10]   <- paste('IM',dataFieldIM$year)
+dataFieldREIM[,10] <- paste("REIM",dataFieldIM$year)
+colnames(dataFieldIM)   <- c("day","numPsy","year","city","location","department","lon","lat","temperature","ID")
+colnames(dataFieldREIM) <- c("day","numPsy","year","city","location","department","lon","lat","temperature","ID")
+
+dataField_list <-split(dataField, dataField$department)
+dataField_plot <- rbind(dataFieldIM,dataFieldREIM)
+dataField_plot <- split(dataField_plot, dataField$department)
+#*******************************************************************************
+# Data Map
+
+dataSpecies <- as.data.frame(read_csv("C:/Users/Walid/Documents/GitHub/PsylleShinyApp/dataMap/dataSpecies.csv"))[,-1]
+
 #*******************************************************************************
 #*******************************************************************************
 #*******************************************************************************
@@ -193,14 +146,12 @@ ui <- dashboardPage(
         tags$style(".left-side, .main-sidebar {padding-top: 50px}"),
 
         sidebarMenu(
-            menuItem("Home page", tabName = "Home", icon = icon("home")),
-            menuItem("Visualization", tabName = "Visualization", icon = icon("chart-area")),
+            menuItem("Acceuil", tabName = "Home", icon = icon("home")),
+            menuItem("Visualisation", tabName = "Visualization", icon = icon("chart-area")),
             menuItem("Gallery", tabName = "Gallery", icon = icon("camera-retro")),
-            menuItem("Map: Collect data", tabName = "Map_bassins", icon = icon("map-marked-alt")),
-            menuItem("Datasets", tabName = "Datasets", icon = icon("database"),
-                     menuSubItem("DataMeteoMontpellier", tabName = "DataMeteoMontpellier", icon = icon("cloud-sun-rain")),
-                     menuSubItem("Data2005", tabName = "Data2005", icon = icon("file"))
-                     ),
+            menuItem("Maps", tabName = "Maps", icon = icon("map-marked-alt")),
+            menuItem("DataMeteoMontpellier", tabName = "DataMeteoMontpellier", icon = icon("cloud-sun-rain")),
+            menuItem("Donnes laboratoire (2005)", tabName = "data2005", icon = icon("file")),
             menuItem("Code R", tabName = "CodeR", icon = icon("code")),
             menuItem("About us", tabName = "AboutUs", icon = icon("question-circle")),
             menuItem("Sources", tabName = "Sources", icon = icon("book"))
@@ -215,108 +166,114 @@ ui <- dashboardPage(
 #///////////////////////////////////////////////////////////////////////////////
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Gallery
-                tabItem(tabName = "Gallery",
-                        includeHTML("Gallery.Rhtml"),
-                        includeCSS("Galleryy.css")
-                        ),
+tabItem(tabName = "Gallery",
+        includeHTML("Gallery.Rhtml"),
+        includeCSS("Galleryy.css")
+        ),
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Visualization
-                tabItem(tabName = "Visualization",
-                        fluidRow(
-                            tabBox(
-                                width = NULL,
-                                height = NULL,
-                                tabPanel(
-                                    "Plot donnees Terrain",          
-                                    plotlyOutput("plotyplot", width = "1000px", height = "500px")      
-                                    ),          
-                                tabPanel("Donnees Terrain",          
-                                         sidebarLayout(
-                                             sidebarPanel(
-                                                 checkboxGroupInput(
-                                                     inputId =  "show_vars",
-                                                     label =  "Selectioner:",
-                                                     choices =  names(Data_terrain),
-                                                     selected = names(Data_terrain),
-                                                     inline = TRUE     
-                                                     )    
-                                                 ),
-                                             mainPanel(div(style = 'overflow-x: scroll',DT::dataTableOutput('Dataterrain'))),
-                                             )
-                                         )
-                                )
-                            )
-                        ),
+tabItem(tabName = "Visualization",
+        fluidRow(
+            tabBox(
+                width = NULL,
+                height = NULL,
+                tabPanel(""),
+                tabPanel("Herault: Plot",          
+                         plotlyOutput("plotyHerault", width = "1000px", height = "500px")      
+                         ),
+                tabPanel("Pyrennes Orientales: Plot",          
+                         plotlyOutput("plotyPyrOr", width = "1000px", height = "500px")      
+                ),
+                tabPanel("Tarn et Garonne: Plot",          
+                         plotlyOutput("plotyTarnGar", width = "1000px", height = "500px")      
+                ),
+                tabPanel("Drome: Plot",          
+                         plotlyOutput("plotyDrome", width = "1000px", height = "500px")      
+                ),
+                tabPanel("Suisse: Plot",          
+                         plotlyOutput("plotySuisse", width = "1000px", height = "500px")      
+                ),
+                tabPanel("Donnees Terrain",          
+                         sidebarLayout(
+                             sidebarPanel(
+                                 selectInput(
+                                     inputId = "data_Field" ,
+                                     label = "Donnees terrain",
+                                     choices = c("Herault", "Pyrennes Orientales", "Tarn et Garonne", "Drome", "Suisse")
+                                 )),
+                             mainPanel(DT::dataTableOutput('dataTerrain'),)
+                         )
+                )
+                )
+            )
+        ),
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Data 2005
-                tabItem(tabName ="Data2005",
-                        fluidRow(
-                            #tabBox(
-                                #width = NULL,
-                                #height = NULL,
-                                sidebarLayout(
-                                    sidebarPanel(
-                                        selectInput(
-                                            inputId = "data_labo2005" ,
-                                            label = "Donnees Laboratoire 2005",
-                                            choices = c(
-                                                "semaine 1A","semaine 1B","semaine 2.3",
-                                                "semaine 2.4","semaine 3.1","semaine 3.2",
-                                                "semaine 3.3","semaine 4.1","semaine 4.2A",
-                                                "semaine 4.2B","semaine 4.3A","semaine 5.1",
-                                                "semaine 5.2","semaine 5.3","semaine 5.4",
-                                                "semaine 6.1","semaine 6.2","semaine 6.3",
-                                                "semaine 7.1","semaine 7.2A","semaine 7.2B",
-                                                "semaine 8.1","semaine 8.2","semaine 9.1",
-                                                "semaine 9.2","semaine 10.1","semaine 10.2A",
-                                                "semaine 10.2B","semaine 11.2","semaine 12.1",
-                                                "semaine 12.2","semaine 13.1"
-                                                )
-                            )
-                        ),
-                        mainPanel(DT::dataTableOutput('DataLabo2005'))
-                    #)
-                ))
-                ),
+tabItem(tabName = "data2005",
+        fluidRow(
+            tabBox(
+                width = NULL,
+                height = NULL,
+                tabPanel(""),
+                tabPanel("Donnees labratoire 2005",
+                         sidebarLayout(
+                             sidebarPanel(
+                                 selectInput(
+                                     inputId = "data_lab" ,
+                                     label = "Donnees laboratoire (2005)",
+                                     choices = c("1A","1B","2.3","2.4","3.1","3.2","3.3",
+                                                 "4.1","4.2A","4.2B","4.3A","4.3B","5.1","5.2","5.3","5.4","6.1",
+                                                 "6.2","6.3","7.1","7.2A","7.2B","8.1","8.2","9.1","9.2","10.1",
+                                                 "10.2A","10.2B","11.2","12.1","12.2","13.3")
+                                     )),
+                             mainPanel(DT::dataTableOutput('dataLabo'),)
+                             )
+                         )
+                )
+            )
+        ),
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # MAP
-                tabItem(tabName = "Map_bassins",
-                        sidebarLayout(
-                            sidebarPanel(includeHTML("Bassins.Rhtml")),
-                            mainPanel(leafletOutput(
-                                "map", width = "1000", height = "1000"
-                            ))
-                        )
-                ),
+tabItem(
+    tabPanel(""),
+    tabName = "Maps",
+    fluidRow(
+        tabBox(   
+            width = NULL, 
+            height = NULL,
+            tabPanel("Bassins",    
+                     leafletOutput("mapBassins", width = "1500", height = "1000")),    
+            tabPanel("Especes A et B",
+                     leafletOutput("mapSpecies", width = "1500", height = "1000"))            
+            )       
+        )        
+    ),
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Data Meteo
-                tabItem(tabName = "DataMeteoMontpellier",
-                        fluidRow(
-                            tabBox(
-                                width = NULL,
-                                height = NULL,
-                                tabPanel(
-                                    "Plot Meteo Montpellier (temperature)",          
-                                    plotlyOutput("plotyplotMeteoTemp", width = "1000px", height = "500px")
-                                    ),
-                                tabPanel(
-                                    "Plot Meteo Montpellier (humidity)",          
-                                    plotlyOutput("plotyplotMeteoHumy", width = "1000px", height = "500px")
-                                ),
-                                tabPanel("Data meteo Montpellier",          
-                                         sidebarLayout(
-                                             sidebarPanel(
-                                                 selectInput(
-                                                     inputId = "data_meteoMontpellier" ,
-                                                     label = "Donnees Meteo Montpellier",
-                                                     choices = as.character(c(2000:2020))
-                                                     )),
-                                             mainPanel(DT::dataTableOutput('MeteoMontpellierData'),)
-                                             )
-                                         )
-                                )
-                            )
-                        )
+tabItem(tabName = "DataMeteoMontpellier",       
+        fluidRow(         
+            tabBox(   
+                width = NULL,  
+                height = NULL, 
+                tabPanel(""),
+                tabPanel("Plot Meteo Montpellier (temperature)",
+                         plotlyOutput("plotyplotMeteoTemp", width = "1000px", height = "500px")),       
+                tabPanel("Plot Meteo Montpellier (humidity)",
+                         plotlyOutput("plotyplotMeteoHumy", width = "1000px", height = "500px")),
+                tabPanel("Data meteo Montpellier",  
+                         sidebarLayout(   
+                             sidebarPanel(    
+                                 selectInput(
+                                     inputId = "data_meteoMontpellier" ,
+                                     label = "Donnees Meteo Montpellier",
+                                     choices = as.character(c(2000:2020))             
+                                     )),
+                             mainPanel(DT::dataTableOutput('MeteoMontpellierData'),)               
+                             )               
+                         )               
+                )               
+            )                
+        )
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     )))
 #*******************************************************************************
@@ -325,115 +282,158 @@ ui <- dashboardPage(
 server <- function(input, output, session){
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Visualisation
-    colors_plotly <- c(
-        "red",
-        #1
-        "firebrick",
-        #2
-        "firebrick3",
-        #3
-        "tomato",
-        #4
-        "tomato4",
-        #5
-        "green",
-        #6
-        "green4",
-        #7
-        "greenyellow",
-        #8
-        "mediumseagreen",
-        #9
-        "olivedrab1",
-        #10
-        "blue",
-        #11
-        "royalblue",
-        #12
-        "skyblue",
-        #13
-        "darkturquoise",
-        #14
-        "mediumblue",
-        #15
-        "deeppink",
-        #16
-        "darkorchid",
-        #17
-        "darkmagenta",
-        #18
-        "blueviolet",
-        #19
-        "black",
-        #20
-        "grey",
-        #21
-        "red",
-        #1
-        "firebrick",
-        #2
-        "firebrick3",
-        #3
-        "tomato",
-        #4
-        "tomato4",
-        #5
-        "green",
-        #6
-        "green4",
-        #7
-        "greenyellow",
-        #8
-        "mediumseagreen",
-        #9
-        "olivedrab1",
-        #10
-        "blue",
-        #11
-        "royalblue",
-        #12
-        "skyblue",
-        #13
-        "darkturquoise",
-        #14
-        "mediumblue",
-        #15
-        "deeppink",
-        #16
-        "darkorchid",
-        #17
-        "darkmagenta",
-        #18
-        "blueviolet",
-        #19
-        "black" #20
-    )
-    colcol <- rainbow(21)
-    colors_plotly <- c(colcol[1:21], colcol[1:20])
-    
-    output$plotyplot <- renderPlotly({
+    output$plotyHerault <- renderPlotly({
         fig <- plot_ly(
-            #filteredData(),
-            Data_terrain_toplotly,
-            x = ~ jours,
+            dataField_plot$Herault,
+            x = ~ day,
             y = ~ numPsy,
-            #split = ~id,
             mode = "lines+markers",
-            color = ~ factor(id),
-            colors = colors_plotly,
+            color = ~ factor(ID),
             hoverinfo = "text",
             text =  ~ paste(
                 '</br>',
-                id,
-                '</br> Number of Psyllids: ',
+                ID,
+                '</br> location: ',
+                location,
+                '</br> nombre de psylle: ',
                 numPsy,
-                '</br> Day: ',
-                jours
+                '</br> temperature: ',
+                temperature,
+                '</br> jour: ',
+                day
             )
         )
         fig <-
             fig %>% layout(
-                title = 'Psyllids observed from 2000 to 2021 (Montpellier)',
+                title = 'Psyllids observed from 2000 to 2021',
+                xaxis = list(title = 'Day',
+                             zeroline = TRUE),
+                yaxis = list(title = 'Number of Psyllids',
+                             zeroline = TRUE)
+            )
+        fig
+    })
+    
+    output$plotyDrome <- renderPlotly({
+        fig <- plot_ly(
+            dataField_plot$Drome,
+            x = ~ day,
+            y = ~ numPsy,
+            mode = "lines+markers",
+            color = ~ factor(ID),
+            hoverinfo = "text",
+            text =  ~ paste(
+                '</br>',
+                ID,
+                '</br> location: ',
+                location,
+                '</br> nombre de psylle: ',
+                numPsy,
+                '</br> temperature: ',
+                temperature,
+                '</br> jour: ',
+                day
+            )
+        )
+        fig <-
+            fig %>% layout(
+                title = 'Psyllids observed from 2000 to 2021',
+                xaxis = list(title = 'Day',
+                             zeroline = TRUE),
+                yaxis = list(title = 'Number of Psyllids',
+                             zeroline = TRUE)
+            )
+        fig
+    })
+    
+    output$plotyPyrOr <- renderPlotly({
+        fig <- plot_ly(
+            dataField_plot$`Pyrenees Orientales`,
+            x = ~ day,
+            y = ~ numPsy,
+            mode = "lines+markers",
+            color = ~ factor(ID),
+            hoverinfo = "text",
+            text =  ~ paste(
+                '</br>',
+                ID,
+                '</br> location: ',
+                location,
+                '</br> nombre de psylle: ',
+                numPsy,
+                '</br> temperature: ',
+                temperature,
+                '</br> jour: ',
+                day
+            )
+        )
+        fig <-
+            fig %>% layout(
+                title = 'Psyllids observed from 2000 to 2021',
+                xaxis = list(title = 'Day',
+                             zeroline = TRUE),
+                yaxis = list(title = 'Number of Psyllids',
+                             zeroline = TRUE)
+            )
+        fig
+    })
+    
+    output$plotySuisse <- renderPlotly({
+        fig <- plot_ly(
+            dataField_plot$Switzerland,
+            x = ~ day,
+            y = ~ numPsy,
+            mode = "lines+markers",
+            color = ~ factor(ID),
+            hoverinfo = "text",
+            text =  ~ paste(
+                '</br>',
+                ID,
+                '</br> location: ',
+                location,
+                '</br> nombre de psylle: ',
+                numPsy,
+                '</br> temperature: ',
+                temperature,
+                '</br> jour: ',
+                day
+            )
+        )
+        fig <-
+            fig %>% layout(
+                title = 'Psyllids observed from 2000 to 2021',
+                xaxis = list(title = 'Day',
+                             zeroline = TRUE),
+                yaxis = list(title = 'Number of Psyllids',
+                             zeroline = TRUE)
+            )
+        fig
+    })
+    
+    output$plotyTarnGar <- renderPlotly({
+        fig <- plot_ly(
+            dataField_plot$`Tarn et Garonne`,
+            x = ~ day,
+            y = ~ numPsy,
+            mode = "lines+markers",
+            color = ~ factor(ID),
+            hoverinfo = "text",
+            text =  ~ paste(
+                '</br>',
+                ID,
+                '</br> location: ',
+                location,
+                '</br> nombre de psylle: ',
+                numPsy,
+                '</br> temperature: ',
+                temperature,
+                '</br> jour: ',
+                day
+            )
+        )
+        fig <-
+            fig %>% layout(
+                title = 'Psyllids observed from 2000 to 2021',
                 xaxis = list(title = 'Day',
                              zeroline = TRUE),
                 yaxis = list(title = 'Number of Psyllids',
@@ -442,9 +442,24 @@ server <- function(input, output, session){
         fig
     })
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Data field
+datasetInput_field <- reactive({
+    switch(
+        input$data_Field,
+        "Herault" = dataField_list$Herault,
+        "Pyrennes Orientales" = dataField_list$`Pyrenees Orientales`,
+        "Tarn et Garonne" = dataField_list$`Tarn et Garonne`,
+        "Drome" = dataField_list$Drome,
+        "Suisse" = dataField_list$Switzerland
+    )
+})
+output$dataTerrain <- DT::renderDataTable(DT::datatable({
+    datasetInput_field()
+}))
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Map
-    output$map <- renderLeaflet({
-        leaflet() %>%
+    output$mapBassins <- renderLeaflet({
+        map_bassins <- leaflet() %>%
             addTiles() %>%
             setView(lng = 2.209667,
                     lat = 46.232193,
@@ -461,12 +476,61 @@ server <- function(input, output, session){
             addMarkers(lng = 4.9,
                        lat = 44.9333,
                        popup = "La Crau")
+        map_bassins %>% addProviderTiles(providers$CartoDB.DarkMatter)
+    })
+    
+    output$mapSpecies <- renderLeaflet({
+        M <- leaflet(data = dataSpecies) %>% 
+            addTiles() %>% 
+            setView(lng = 2.209667,lat = 46.232193,zoom = 6) %>% 
+            addCircleMarkers(lng = dataSpecies[dataSpecies$type=="A",4],  lat = dataSpecies[dataSpecies$type=="A",3], color = "yellow", radius = 10, stroke = F) %>%
+            addCircleMarkers(lng = dataSpecies[dataSpecies$type=="B",4],  lat = dataSpecies[dataSpecies$type=="B",3], color = "red", radius = 10, stroke = F) %>%
+            addCircleMarkers(lng = dataSpecies[dataSpecies$type=="AB",4], lat = dataSpecies[dataSpecies$type=="AB",3], color = "orange", radius = 10, stroke = F)
+        M %>% addProviderTiles(providers$CartoDB.DarkMatter)
     })
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# Data field
-output$Dataterrain <- DT::renderDataTable({
-    DT::datatable(Data_terrain[, input$show_vars, drop = FALSE])
+# 2005
+datasetInput_lab <- reactive({
+    switch(
+        input$data_lab,
+        "1A"    = dataLab[dataLab$tree=="1A",],
+        "1B"    = dataLab[dataLab$tree=="1B",],
+        "2.3"   = dataLab[dataLab$tree=="2.3",],
+        "2.4"   = dataLab[dataLab$tree=="2.4",],
+        "3.1"   = dataLab[dataLab$tree=="3.1",],
+        "3.2"   = dataLab[dataLab$tree=="3.2",],
+        "3.3"   = dataLab[dataLab$tree=="3.3",],
+        "4.1"   = dataLab[dataLab$tree=="4.1",],
+        "4.2A"  = dataLab[dataLab$tree=="4.2A",],
+        "4.2B"  = dataLab[dataLab$tree=="4.2B",],
+        "4.3A"  = dataLab[dataLab$tree=="4.3A",],
+        "4.3B"  = dataLab[dataLab$tree=="4.3B",],
+        "5.1"   = dataLab[dataLab$tree=="5.1",],
+        "5.2"   = dataLab[dataLab$tree=="5.2",],
+        "5.3"   = dataLab[dataLab$tree=="5.3",],
+        "5.4"   = dataLab[dataLab$tree=="5.4",],
+        "6.1"   = dataLab[dataLab$tree=="6.1",],
+        "6.2"   = dataLab[dataLab$tree=="6.2",],
+        "6.3"   = dataLab[dataLab$tree=="6.3",],
+        "7.1"   = dataLab[dataLab$tree=="7.1",],
+        "7.2A"  = dataLab[dataLab$tree=="7.2A",],
+        "7.2B"  = dataLab[dataLab$tree=="7.2B",],
+        "8.1"   = dataLab[dataLab$tree=="8.1",],
+        "8.2"   = dataLab[dataLab$tree=="8.2",],
+        "9.1"   = dataLab[dataLab$tree=="9.1",],
+        "9.2"   = dataLab[dataLab$tree=="9.2",],
+        "10.1"  = dataLab[dataLab$tree=="10.1",],
+        "10.2A" = dataLab[dataLab$tree=="10.2A",],
+        "10.2B" = dataLab[dataLab$tree=="10.2B",],
+        "11.2"  = dataLab[dataLab$tree=="11.2",],
+        "12.1"  = dataLab[dataLab$tree=="12.1",],
+        "12.2"  = dataLab[dataLab$tree=="12.2",],
+        "13.3"  = dataLab[dataLab$tree=="13.3",]
+    )
 })
+output$dataLabo <- DT::renderDataTable(DT::datatable({
+    datasetInput_lab()
+}))
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Data Meteo Montpellier
 datasetInput_meteo <- reactive({
