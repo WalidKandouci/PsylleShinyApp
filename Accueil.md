@@ -4,9 +4,9 @@ Bienvenue sur le site ¨Psyllids pruni" ou nous mettons a disposition toutes les
 
 # Qui sommes nous ?
 
-Solarized dark             |  Solarized Ocean
+![](www/NicolasSauvion.jpg) | ![](www/WalidKandouci.png)
 :-------------------------:|:-------------------------:
-![](www/NicolasSauvion.jpg)  |  ![](www/WalidKandouci.png)
+Nicolas Sauvion | Walid Kandouci
 
 En cliquant sur les onglets de gauches:
 
