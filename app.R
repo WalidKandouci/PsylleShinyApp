@@ -17,93 +17,13 @@ library(sass)
 library(markdown)
 #*******************************************************************************
 # Datasets
-# Data Meteo Fr
-Data_ALLMeteo_Montpellier <- read_csv2("dataMeteo/Montpellier/Data_ALLMeteo_Montpellier.csv")
-Data_ALLMeteo_Montpellier$temperature <- as.numeric(Data_ALLMeteo_Montpellier$temperature)
-Data_ALLMeteo_Montpellier$humidity <- as.numeric(Data_ALLMeteo_Montpellier$humidity)
-Data_ALLMeteo_Montpellier$ID <- as.numeric(Data_ALLMeteo_Montpellier$ID)
-
-Data_ALLMeteo_Montpellier_mean <- read_csv2("dataMeteo/Montpellier/Data_ALLMeteo_Montpellier_mean.csv")
-Data_ALLMeteo_Montpellier_mean$temperature <- as.numeric(Data_ALLMeteo_Montpellier_mean$temperature)
-Data_ALLMeteo_Montpellier_mean$humidity <- as.numeric(Data_ALLMeteo_Montpellier_mean$humidity)
-Data_ALLMeteo_Montpellier_mean$ID <- as.numeric(Data_ALLMeteo_Montpellier_mean$ID)
-
-Data_ALLMeteo_Montpellier_mean_plot <- read_csv2("dataMeteo/Montpellier/Data_ALLMeteo_Montpellier_mean_plot.csv")
-Data_ALLMeteo_Montpellier_mean_plot$temperature <- as.numeric(Data_ALLMeteo_Montpellier_mean_plot$temperature)
-Data_ALLMeteo_Montpellier_mean_plot$humidity <- as.numeric(Data_ALLMeteo_Montpellier_mean_plot$humidity)
-Data_ALLMeteo_Montpellier_mean_plot$ID <- as.numeric(Data_ALLMeteo_Montpellier_mean_plot$ID)
-
-Data_Meteo_Montpellier_2000 <- Data_ALLMeteo_Montpellier[Data_ALLMeteo_Montpellier$ID==2000,c(-1)]
-Data_Meteo_Montpellier_2001 <- Data_ALLMeteo_Montpellier[Data_ALLMeteo_Montpellier$ID==2001,c(-1)]
-Data_Meteo_Montpellier_2002 <- Data_ALLMeteo_Montpellier[Data_ALLMeteo_Montpellier$ID==2002,c(-1)]
-Data_Meteo_Montpellier_2003 <- Data_ALLMeteo_Montpellier[Data_ALLMeteo_Montpellier$ID==2003,c(-1)]
-Data_Meteo_Montpellier_2004 <- Data_ALLMeteo_Montpellier[Data_ALLMeteo_Montpellier$ID==2004,c(-1)]
-Data_Meteo_Montpellier_2005 <- Data_ALLMeteo_Montpellier[Data_ALLMeteo_Montpellier$ID==2005,c(-1)]
-Data_Meteo_Montpellier_2006 <- Data_ALLMeteo_Montpellier[Data_ALLMeteo_Montpellier$ID==2006,c(-1)]
-Data_Meteo_Montpellier_2007 <- Data_ALLMeteo_Montpellier[Data_ALLMeteo_Montpellier$ID==2007,c(-1)]
-Data_Meteo_Montpellier_2008 <- Data_ALLMeteo_Montpellier[Data_ALLMeteo_Montpellier$ID==2008,c(-1)]
-Data_Meteo_Montpellier_2009 <- Data_ALLMeteo_Montpellier[Data_ALLMeteo_Montpellier$ID==2009,c(-1)]
-Data_Meteo_Montpellier_2010 <- Data_ALLMeteo_Montpellier[Data_ALLMeteo_Montpellier$ID==2010,c(-1)]
-Data_Meteo_Montpellier_2011 <- Data_ALLMeteo_Montpellier[Data_ALLMeteo_Montpellier$ID==2011,c(-1)]
-Data_Meteo_Montpellier_2012 <- Data_ALLMeteo_Montpellier[Data_ALLMeteo_Montpellier$ID==2012,c(-1)]
-Data_Meteo_Montpellier_2013 <- Data_ALLMeteo_Montpellier[Data_ALLMeteo_Montpellier$ID==2013,c(-1)]
-Data_Meteo_Montpellier_2014 <- Data_ALLMeteo_Montpellier[Data_ALLMeteo_Montpellier$ID==2014,c(-1)]
-Data_Meteo_Montpellier_2015 <- Data_ALLMeteo_Montpellier[Data_ALLMeteo_Montpellier$ID==2015,c(-1)]
-Data_Meteo_Montpellier_2016 <- Data_ALLMeteo_Montpellier[Data_ALLMeteo_Montpellier$ID==2016,c(-1)]
-Data_Meteo_Montpellier_2017 <- Data_ALLMeteo_Montpellier[Data_ALLMeteo_Montpellier$ID==2017,c(-1)]
-Data_Meteo_Montpellier_2018 <- Data_ALLMeteo_Montpellier[Data_ALLMeteo_Montpellier$ID==2018,c(-1)]
-Data_Meteo_Montpellier_2019 <- Data_ALLMeteo_Montpellier[Data_ALLMeteo_Montpellier$ID==2019,c(-1)]
-Data_Meteo_Montpellier_2020 <- Data_ALLMeteo_Montpellier[Data_ALLMeteo_Montpellier$ID==2020,c(-1)]
-
-Data_Meteo_Montpellier_mean_2000 <- Data_ALLMeteo_Montpellier_mean[Data_ALLMeteo_Montpellier_mean$ID==2000,c(-1)]
-Data_Meteo_Montpellier_mean_2001 <- Data_ALLMeteo_Montpellier_mean[Data_ALLMeteo_Montpellier_mean$ID==2001,c(-1)]
-Data_Meteo_Montpellier_mean_2002 <- Data_ALLMeteo_Montpellier_mean[Data_ALLMeteo_Montpellier_mean$ID==2002,c(-1)]
-Data_Meteo_Montpellier_mean_2003 <- Data_ALLMeteo_Montpellier_mean[Data_ALLMeteo_Montpellier_mean$ID==2003,c(-1)]
-Data_Meteo_Montpellier_mean_2004 <- Data_ALLMeteo_Montpellier_mean[Data_ALLMeteo_Montpellier_mean$ID==2004,c(-1)]
-Data_Meteo_Montpellier_mean_2005 <- Data_ALLMeteo_Montpellier_mean[Data_ALLMeteo_Montpellier_mean$ID==2005,c(-1)]
-Data_Meteo_Montpellier_mean_2006 <- Data_ALLMeteo_Montpellier_mean[Data_ALLMeteo_Montpellier_mean$ID==2006,c(-1)]
-Data_Meteo_Montpellier_mean_2007 <- Data_ALLMeteo_Montpellier_mean[Data_ALLMeteo_Montpellier_mean$ID==2007,c(-1)]
-Data_Meteo_Montpellier_mean_2008 <- Data_ALLMeteo_Montpellier_mean[Data_ALLMeteo_Montpellier_mean$ID==2008,c(-1)]
-Data_Meteo_Montpellier_mean_2009 <- Data_ALLMeteo_Montpellier_mean[Data_ALLMeteo_Montpellier_mean$ID==2009,c(-1)]
-Data_Meteo_Montpellier_mean_2010 <- Data_ALLMeteo_Montpellier_mean[Data_ALLMeteo_Montpellier_mean$ID==2010,c(-1)]
-Data_Meteo_Montpellier_mean_2011 <- Data_ALLMeteo_Montpellier_mean[Data_ALLMeteo_Montpellier_mean$ID==2011,c(-1)]
-Data_Meteo_Montpellier_mean_2012 <- Data_ALLMeteo_Montpellier_mean[Data_ALLMeteo_Montpellier_mean$ID==2012,c(-1)]
-Data_Meteo_Montpellier_mean_2013 <- Data_ALLMeteo_Montpellier_mean[Data_ALLMeteo_Montpellier_mean$ID==2013,c(-1)]
-Data_Meteo_Montpellier_mean_2014 <- Data_ALLMeteo_Montpellier_mean[Data_ALLMeteo_Montpellier_mean$ID==2014,c(-1)]
-Data_Meteo_Montpellier_mean_2015 <- Data_ALLMeteo_Montpellier_mean[Data_ALLMeteo_Montpellier_mean$ID==2015,c(-1)]
-Data_Meteo_Montpellier_mean_2016 <- Data_ALLMeteo_Montpellier_mean[Data_ALLMeteo_Montpellier_mean$ID==2016,c(-1)]
-Data_Meteo_Montpellier_mean_2017 <- Data_ALLMeteo_Montpellier_mean[Data_ALLMeteo_Montpellier_mean$ID==2017,c(-1)]
-Data_Meteo_Montpellier_mean_2018 <- Data_ALLMeteo_Montpellier_mean[Data_ALLMeteo_Montpellier_mean$ID==2018,c(-1)]
-Data_Meteo_Montpellier_mean_2019 <- Data_ALLMeteo_Montpellier_mean[Data_ALLMeteo_Montpellier_mean$ID==2019,c(-1)]
-Data_Meteo_Montpellier_mean_2020 <- Data_ALLMeteo_Montpellier_mean[Data_ALLMeteo_Montpellier_mean$ID==2020,c(-1)]
-
-Data_Meteo_Montpellier_mean_2000_plot <- Data_ALLMeteo_Montpellier_mean_plot[Data_ALLMeteo_Montpellier_mean_plot$ID==2000,c(-1)]
-Data_Meteo_Montpellier_mean_2001_plot <- Data_ALLMeteo_Montpellier_mean_plot[Data_ALLMeteo_Montpellier_mean_plot$ID==2001,c(-1)]
-Data_Meteo_Montpellier_mean_2002_plot <- Data_ALLMeteo_Montpellier_mean_plot[Data_ALLMeteo_Montpellier_mean_plot$ID==2002,c(-1)]
-Data_Meteo_Montpellier_mean_2003_plot <- Data_ALLMeteo_Montpellier_mean_plot[Data_ALLMeteo_Montpellier_mean_plot$ID==2003,c(-1)]
-Data_Meteo_Montpellier_mean_2004_plot <- Data_ALLMeteo_Montpellier_mean_plot[Data_ALLMeteo_Montpellier_mean_plot$ID==2004,c(-1)]
-Data_Meteo_Montpellier_mean_2005_plot <- Data_ALLMeteo_Montpellier_mean_plot[Data_ALLMeteo_Montpellier_mean_plot$ID==2005,c(-1)]
-Data_Meteo_Montpellier_mean_2006_plot <- Data_ALLMeteo_Montpellier_mean_plot[Data_ALLMeteo_Montpellier_mean_plot$ID==2006,c(-1)]
-Data_Meteo_Montpellier_mean_2007_plot <- Data_ALLMeteo_Montpellier_mean_plot[Data_ALLMeteo_Montpellier_mean_plot$ID==2007,c(-1)]
-Data_Meteo_Montpellier_mean_2008_plot <- Data_ALLMeteo_Montpellier_mean_plot[Data_ALLMeteo_Montpellier_mean_plot$ID==2008,c(-1)]
-Data_Meteo_Montpellier_mean_2009_plot <- Data_ALLMeteo_Montpellier_mean_plot[Data_ALLMeteo_Montpellier_mean_plot$ID==2009,c(-1)]
-Data_Meteo_Montpellier_mean_2010_plot <- Data_ALLMeteo_Montpellier_mean_plot[Data_ALLMeteo_Montpellier_mean_plot$ID==2010,c(-1)]
-Data_Meteo_Montpellier_mean_2011_plot <- Data_ALLMeteo_Montpellier_mean_plot[Data_ALLMeteo_Montpellier_mean_plot$ID==2011,c(-1)]
-Data_Meteo_Montpellier_mean_2012_plot <- Data_ALLMeteo_Montpellier_mean_plot[Data_ALLMeteo_Montpellier_mean_plot$ID==2012,c(-1)]
-Data_Meteo_Montpellier_mean_2013_plot <- Data_ALLMeteo_Montpellier_mean_plot[Data_ALLMeteo_Montpellier_mean_plot$ID==2013,c(-1)]
-Data_Meteo_Montpellier_mean_2014_plot <- Data_ALLMeteo_Montpellier_mean_plot[Data_ALLMeteo_Montpellier_mean_plot$ID==2014,c(-1)]
-Data_Meteo_Montpellier_mean_2015_plot <- Data_ALLMeteo_Montpellier_mean_plot[Data_ALLMeteo_Montpellier_mean_plot$ID==2015,c(-1)]
-Data_Meteo_Montpellier_mean_2016_plot <- Data_ALLMeteo_Montpellier_mean_plot[Data_ALLMeteo_Montpellier_mean_plot$ID==2016,c(-1)]
-Data_Meteo_Montpellier_mean_2017_plot <- Data_ALLMeteo_Montpellier_mean_plot[Data_ALLMeteo_Montpellier_mean_plot$ID==2017,c(-1)]
-Data_Meteo_Montpellier_mean_2018_plot <- Data_ALLMeteo_Montpellier_mean_plot[Data_ALLMeteo_Montpellier_mean_plot$ID==2018,c(-1)]
-Data_Meteo_Montpellier_mean_2019_plot <- Data_ALLMeteo_Montpellier_mean_plot[Data_ALLMeteo_Montpellier_mean_plot$ID==2019,c(-1)]
-Data_Meteo_Montpellier_mean_2020_plot <- Data_ALLMeteo_Montpellier_mean_plot[Data_ALLMeteo_Montpellier_mean_plot$ID==2020,c(-1)]
+# Data Meteo
+meteoMontpellier <- as.data.frame(read_csv2("dataMeteo/meteoMontpellier.csv"))[,-1]
 #*******************************************************************************
-# Data 2005
+# Data lab
 dataLab <- as.data.frame(read_csv("dataPlant/dataLab.csv"))[,-1]
 #*******************************************************************************
 # Data field
-
 dataField <- as.data.frame(read_csv("dataField/dataField.csv"))[,-1]
 dataFieldIM   <- dataField[,-3]
 dataFieldREIM <- dataField[,-2]
@@ -129,23 +49,11 @@ ui <- dashboardPage(
                             tags$style(".main-header {max-height: 50px}"),
                             tags$style(".main-header .logo {height: 50px}")
     ),
-                    title = ""#,
-                #    tags$li(class = "dropdown",
-                #            tags$a(href="https://umr-phim.cirad.fr/", target="_blank", 
-                #                   tags$img(height = "100px", alt="PHIM Logo", src="PHIMlogo.png")
-                #            )),
-                #    tags$li(class = "dropdown",
-                #            tags$a(href="https://www.inrae.fr/", target="_blank", 
-                #                   tags$img(height = "100px", alt="INRAE Logo", src="INRAElogo.png")
-                #            )),
-                #    tags$li(class = "dropdown",
-                #            tags$a(href="https://www.cirad.fr/", target="_blank", 
-                #                   tags$img(height = "100px", alt="CIRAD Logo", src="CIRADlogo.png")
+                    title = "Psyl'risk"
                             ),
 #///////////////////////////////////////////////////////////////////////////////
     dashboardSidebar(
         tags$style(".left-side, .main-sidebar {padding-top: 50px}"),
-
         sidebarMenu(
             HTML(paste0(
                 "<br>",
@@ -156,7 +64,7 @@ ui <- dashboardPage(
             menuItem("Visualisation", tabName = "Visualization", icon = icon("chart-area")),
             menuItem("Gallery", tabName = "Gallery", icon = icon("camera-retro")),
             menuItem("Maps", tabName = "Maps", icon = icon("map-marked-alt")),
-            menuItem("DataMeteoMontpellier", tabName = "DataMeteoMontpellier", icon = icon("cloud-sun-rain")),
+            menuItem("Donnes meteo", tabName = "DataMeteoMontpellier", icon = icon("cloud-sun-rain")),
             menuItem("Donnes laboratoire (2005)", tabName = "data2005", icon = icon("file")),
             menuItem("Code R", tabName = "CodeR", icon = icon("code")),
             menuItem("About us", tabName = "AboutUs", icon = icon("question-circle")),
@@ -260,21 +168,22 @@ tabItem(tabName = "DataMeteoMontpellier",
                 width = NULL,  
                 height = NULL, 
                 tabPanel(""),
-                tabPanel("Plot Meteo Montpellier (temperature)",
-                         plotlyOutput("plotyplotMeteoTemp", width = "1000px", height = "500px")),       
-                tabPanel("Plot Meteo Montpellier (humidity)",
-                         plotlyOutput("plotyplotMeteoHumy", width = "1000px", height = "500px")),
-                tabPanel("Data meteo Montpellier",  
+                tabPanel("Donnes meteo Montpellier",  
                          sidebarLayout(   
                              sidebarPanel(    
                                  selectInput(
                                      inputId = "data_meteoMontpellier" ,
                                      label = "Donnees Meteo Montpellier",
                                      choices = as.character(c(2000:2020))             
-                                     )),
+                                 )),
                              mainPanel(DT::dataTableOutput('MeteoMontpellierData'),)               
-                             )               
                          )               
+                ),
+                tabPanel("Plot Meteo Montpellier 2005 (temperature)",
+                         plotlyOutput("plotyplotMeteoTemp", width = "1000px", height = "500px")),       
+                tabPanel("Plot Meteo Montpellier 2005 (humidite)",
+                         plotlyOutput("plotyplotMeteoHumy", width = "1000px", height = "500px"))
+                               
                 )               
             )                
         )
@@ -540,27 +449,27 @@ output$dataLabo <- DT::renderDataTable(DT::datatable({
 datasetInput_meteo <- reactive({
     switch(
         input$data_meteoMontpellier,
-        "2000" = Data_Meteo_Montpellier_2000,
-        "2001" = Data_Meteo_Montpellier_2001,
-        "2002" = Data_Meteo_Montpellier_2002,
-        "2003" = Data_Meteo_Montpellier_2003,
-        "2004" = Data_Meteo_Montpellier_2004,
-        "2005" = Data_Meteo_Montpellier_2005,
-        "2006" = Data_Meteo_Montpellier_2006,
-        "2007" = Data_Meteo_Montpellier_2007,
-        "2008" = Data_Meteo_Montpellier_2008,
-        "2009" = Data_Meteo_Montpellier_2009,
-        "2010" = Data_Meteo_Montpellier_2010,
-        "2011" = Data_Meteo_Montpellier_2011,
-        "2012" = Data_Meteo_Montpellier_2012,
-        "2013" = Data_Meteo_Montpellier_2013,
-        "2014" = Data_Meteo_Montpellier_2014,
-        "2015" = Data_Meteo_Montpellier_2015,
-        "2016" = Data_Meteo_Montpellier_2016,
-        "2017" = Data_Meteo_Montpellier_2017,
-        "2018" = Data_Meteo_Montpellier_2018,
-        "2019" = Data_Meteo_Montpellier_2019,
-        "2020" = Data_Meteo_Montpellier_2020
+        "2000" = meteoMontpellier[meteoMontpellier$ID==2000,-4],
+        "2001" = meteoMontpellier[meteoMontpellier$ID==2001,-4],
+        "2002" = meteoMontpellier[meteoMontpellier$ID==2002,-4],
+        "2003" = meteoMontpellier[meteoMontpellier$ID==2003,-4],
+        "2004" = meteoMontpellier[meteoMontpellier$ID==2004,-4],
+        "2005" = meteoMontpellier[meteoMontpellier$ID==2005,-4],
+        "2006" = meteoMontpellier[meteoMontpellier$ID==2006,-4],
+        "2007" = meteoMontpellier[meteoMontpellier$ID==2007,-4],
+        "2008" = meteoMontpellier[meteoMontpellier$ID==2008,-4],
+        "2009" = meteoMontpellier[meteoMontpellier$ID==2009,-4],
+        "2010" = meteoMontpellier[meteoMontpellier$ID==2010,-4],
+        "2011" = meteoMontpellier[meteoMontpellier$ID==2011,-4],
+        "2012" = meteoMontpellier[meteoMontpellier$ID==2012,-4],
+        "2013" = meteoMontpellier[meteoMontpellier$ID==2013,-4],
+        "2014" = meteoMontpellier[meteoMontpellier$ID==2014,-4],
+        "2015" = meteoMontpellier[meteoMontpellier$ID==2015,-4],
+        "2016" = meteoMontpellier[meteoMontpellier$ID==2016,-4],
+        "2017" = meteoMontpellier[meteoMontpellier$ID==2017,-4],
+        "2018" = meteoMontpellier[meteoMontpellier$ID==2018,-4],
+        "2019" = meteoMontpellier[meteoMontpellier$ID==2019,-4],
+        "2020" = meteoMontpellier[meteoMontpellier$ID==2020,-4]
     )
 })
 output$MeteoMontpellierData <- DT::renderDataTable(DT::datatable({
@@ -570,18 +479,17 @@ output$MeteoMontpellierData <- DT::renderDataTable(DT::datatable({
 output$plotyplotMeteoTemp <- renderPlotly({
     fig <- plot_ly(
         #filteredData(),
-        Data_ALLMeteo_Montpellier_mean_plot,
+        meteoMontpellier,
         x = ~ date,
         y = ~ temperature,
-        #split = id,
+        color = ~ factor(ID),
         mode = "lines",
-        type = "scatter",
-        color = ~ factor(ID)
+        type = "scatter"
     )
     fig <-
         fig %>% layout(
-            title = 'Meteo Data from 2000 to 2021 (Montpellier)',
-            xaxis = list(title = 'Time',
+            title = 'Temperatures Montpellier (2000-2020)',
+            xaxis = list(title = 'Temps',
                          zeroline = TRUE),
             yaxis = list(title = 'Temperatures',
                          zeroline = TRUE)
@@ -592,27 +500,23 @@ output$plotyplotMeteoTemp <- renderPlotly({
 output$plotyplotMeteoHumy <- renderPlotly({
     fig <- plot_ly(
         #filteredData(),
-        Data_ALLMeteo_Montpellier_mean_plot,
+        meteoMontpellier,
         x = ~ date,
         y = ~ humidity,
-        #split = id,
+        color = ~ factor(ID),
         mode = "lines",
-        type = "scatter",
-        color = ~ factor(ID)
+        type = "scatter"
     )
     fig <-
         fig %>% layout(
-            title = 'Meteo Data from 2000 to 2021 (Montpellier)',
-            xaxis = list(title = 'Time',
+            title = 'Humidite Montpellier (2000-2020)',
+            xaxis = list(title = 'Temps',
                          zeroline = TRUE),
-            yaxis = list(title = 'Humidity',
+            yaxis = list(title = 'Temperatures',
                          zeroline = TRUE)
         )
     fig
 })
-# Home page
-
-
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 }
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
