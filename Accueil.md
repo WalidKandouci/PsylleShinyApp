@@ -4,11 +4,15 @@ Bienvenue sur le site ¨Psyllids pruni" ou nous mettons a disposition toutes les
 
 # Qui sommes nous ?
 
+<center>
+  
 ![](www/NicolasSauvion.jpg)| ![](www/WalidKandouci.jpg)|
 :-------------------------:|:-------------------------:
 |Nicolas Sauvion | Walid Kandouci|
 |Ingénieur de recherche | Etudiant master 2 Biostatistique|
 |INRA | Université Montpellier|
+  
+</center>
 
 En cliquant sur les onglets de gauches:
 
