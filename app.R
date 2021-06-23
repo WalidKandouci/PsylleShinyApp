@@ -149,7 +149,7 @@ ui <- dashboardPage(
         sidebarMenu(
             HTML(paste0(
                 "<br>",
-                "<a href='https://www.nps.gov/index.htm' target='_blank'><img style = 'display: block; margin-left: auto; margin-right: auto;' src='PsyllidsLogo.png' width = '186'></a>",
+                "<a href='https://walidkandouci.shinyapps.io/PsylleShinyApp/' target='_blank'><img style = 'display: block; margin-left: auto; margin-right: auto;' src='logo.png' width = '186'></a>",
                 "<br>"
             )),
             menuItem("Acceuil", tabName = "Home", icon = icon("home")),
