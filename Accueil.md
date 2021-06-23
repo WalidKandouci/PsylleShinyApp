@@ -7,9 +7,9 @@ Bienvenue sur le site ¨Psyllids pruni" ou nous mettons a disposition toutes les
 ![](www/NicolasSauvion.jpg) | ![](www/WalidKandouci.png)
 :-------------------------:|:-------------------------:
 Nicolas Sauvion | Walid Kandouci
-
+:-------------------------:|:-------------------------:
 Ingénieur de recherche | Etudiant master 2 Biostatistique
-
+:-------------------------:|:-------------------------:
 INRA | Université Montpellier
 
 En cliquant sur les onglets de gauches:
