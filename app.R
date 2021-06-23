@@ -14,6 +14,7 @@ library(shinythemes)
 library(dplyr)
 library(plotly)
 library(sass)
+library(markdown)
 #*******************************************************************************
 # Datasets
 # Data Meteo Fr
