@@ -6,7 +6,7 @@ Bienvenue sur le site ¨Psyllids pruni" ou nous mettons a disposition toutes les
 
 Solarized dark             |  Solarized Ocean
 :-------------------------:|:-------------------------:
-![](NicolasSauvion.jpg)  |  ![](WalidKandouci.png)
+![](www/NicolasSauvion.jpg)  |  ![](www/WalidKandouci.png)
 
 En cliquant sur les onglets de gauches:
 
