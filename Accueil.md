@@ -8,6 +8,10 @@ Bienvenue sur le site ¨Psyllids pruni" ou nous mettons a disposition toutes les
 |:--:|
 | <b>Image Credits - Fig.2 - 4K Mountains Wallpaper</b>|
 
+<p align="center">
+  <img src=="www/NicolasSauvion.jpg"/>
+</p>
+
 <p>
   <img src="www/NicolasSauvion.jpg" width="100" />
   <img src="/www/WalidKandouci.jpg" width="100" /> 
