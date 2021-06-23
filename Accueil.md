@@ -1,6 +1,13 @@
 # Bienvenu !
 
 Bienvenue sur le site ¨Psyllids pruni" ou nous mettons a disposition toutes les informations nécessaires sur nos psylles.
+
+# Qui sommes nous ?
+
+Solarized dark             |  Solarized Ocean
+:-------------------------:|:-------------------------:
+![](NicolasSauvion.jpg)  |  ![](WalidKandouci.png)
+
 En cliquant sur les onglets de gauches:
 
 * **Visualisation:** visualiser nos données récoltés sur nos sites et comparer nos données récoltés sur plusieurs années grasse a nos graphiques interactifs.
