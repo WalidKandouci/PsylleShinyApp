@@ -17,17 +17,17 @@ library(sass)
 #*******************************************************************************
 # Datasets
 # Data Meteo Fr
-Data_ALLMeteo_Montpellier <- read_csv2("C:/Users/Walid/Documents/GitHub/PsylleShinyApp/dataMeteo/Montpellier/Data_ALLMeteo_Montpellier.csv")
+Data_ALLMeteo_Montpellier <- read_csv2("dataMeteo/Montpellier/Data_ALLMeteo_Montpellier.csv")
 Data_ALLMeteo_Montpellier$temperature <- as.numeric(Data_ALLMeteo_Montpellier$temperature)
 Data_ALLMeteo_Montpellier$humidity <- as.numeric(Data_ALLMeteo_Montpellier$humidity)
 Data_ALLMeteo_Montpellier$ID <- as.numeric(Data_ALLMeteo_Montpellier$ID)
 
-Data_ALLMeteo_Montpellier_mean <- read_csv2("C:/Users/Walid/Documents/GitHub/PsylleShinyApp/dataMeteo/Montpellier/Data_ALLMeteo_Montpellier_mean.csv")
+Data_ALLMeteo_Montpellier_mean <- read_csv2("dataMeteo/Montpellier/Data_ALLMeteo_Montpellier_mean.csv")
 Data_ALLMeteo_Montpellier_mean$temperature <- as.numeric(Data_ALLMeteo_Montpellier_mean$temperature)
 Data_ALLMeteo_Montpellier_mean$humidity <- as.numeric(Data_ALLMeteo_Montpellier_mean$humidity)
 Data_ALLMeteo_Montpellier_mean$ID <- as.numeric(Data_ALLMeteo_Montpellier_mean$ID)
 
-Data_ALLMeteo_Montpellier_mean_plot <- read_csv2("C:/Users/Walid/Documents/GitHub/PsylleShinyApp/dataMeteo/Montpellier/Data_ALLMeteo_Montpellier_mean_plot.csv")
+Data_ALLMeteo_Montpellier_mean_plot <- read_csv2("dataMeteo/Montpellier/Data_ALLMeteo_Montpellier_mean_plot.csv")
 Data_ALLMeteo_Montpellier_mean_plot$temperature <- as.numeric(Data_ALLMeteo_Montpellier_mean_plot$temperature)
 Data_ALLMeteo_Montpellier_mean_plot$humidity <- as.numeric(Data_ALLMeteo_Montpellier_mean_plot$humidity)
 Data_ALLMeteo_Montpellier_mean_plot$ID <- as.numeric(Data_ALLMeteo_Montpellier_mean_plot$ID)
@@ -99,11 +99,11 @@ Data_Meteo_Montpellier_mean_2019_plot <- Data_ALLMeteo_Montpellier_mean_plot[Dat
 Data_Meteo_Montpellier_mean_2020_plot <- Data_ALLMeteo_Montpellier_mean_plot[Data_ALLMeteo_Montpellier_mean_plot$ID==2020,c(-1)]
 #*******************************************************************************
 # Data 2005
-dataLab <- as.data.frame(read_csv("C:/Users/Walid/Documents/GitHub/PsylleShinyApp/dataPlant/dataLab.csv"))[,-1]
+dataLab <- as.data.frame(read_csv("dataPlant/dataLab.csv"))[,-1]
 #*******************************************************************************
 # Data field
 
-dataField <- as.data.frame(read_csv("C:/Users/Walid/Documents/GitHub/PsylleShinyApp/dataField/dataField.csv"))[,-1]
+dataField <- as.data.frame(read_csv("dataField/dataField.csv"))[,-1]
 dataFieldIM   <- dataField[,-3]
 dataFieldREIM <- dataField[,-2]
 dataFieldIM[,10]   <- paste('IM',dataFieldIM$year)
@@ -117,7 +117,7 @@ dataField_plot <- split(dataField_plot, dataField$department)
 #*******************************************************************************
 # Data Map
 
-dataSpecies <- as.data.frame(read_csv("C:/Users/Walid/Documents/GitHub/PsylleShinyApp/dataMap/dataSpecies.csv"))[,-1]
+dataSpecies <- as.data.frame(read_csv("dataMap/dataSpecies.csv"))[,-1]
 
 #*******************************************************************************
 #*******************************************************************************
@@ -146,6 +146,11 @@ ui <- dashboardPage(
         tags$style(".left-side, .main-sidebar {padding-top: 50px}"),
 
         sidebarMenu(
+            HTML(paste0(
+                "<br>",
+                "<a href='https://www.nps.gov/index.htm' target='_blank'><img style = 'display: block; margin-left: auto; margin-right: auto;' src='PsyllidsLogo.png' width = '186'></a>",
+                "<br>"
+            )),
             menuItem("Acceuil", tabName = "Home", icon = icon("home")),
             menuItem("Visualisation", tabName = "Visualization", icon = icon("chart-area")),
             menuItem("Gallery", tabName = "Gallery", icon = icon("camera-retro")),
