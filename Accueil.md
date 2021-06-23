@@ -7,6 +7,7 @@ Bienvenue sur le site ¨Psyllids pruni" ou nous mettons a disposition toutes les
 <p align="center">
   <img src="www/NicolasSauvion.jpg">
 </p>
+<p align="center">This is a centered caption for the image<p align="center">
 
 En cliquant sur les onglets de gauches:
 
