@@ -164,10 +164,7 @@ ui <- dashboardPage(
     ),
     dashboardBody(
         tabItems(
-                tabItem(tabName = "Home", tags$video(src="VIDEO.MP4", type = "video/mp4",
-                                                     height = "500px", width = "500px",#alt= 'Something went wrong',
-                                                     controls = "controls")
-                        ),
+                tabItem(tabName = "Home", includeMarkdown("Accueil.md")),
 #///////////////////////////////////////////////////////////////////////////////
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Gallery
