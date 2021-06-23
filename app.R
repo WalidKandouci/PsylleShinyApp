@@ -244,6 +244,7 @@ tabItem(
         tabBox(   
             width = NULL, 
             height = NULL,
+            tabPanel(""),
             tabPanel("Bassins",    
                      leafletOutput("mapBassins", width = "1500", height = "1000")),    
             tabPanel("Especes A et B",
