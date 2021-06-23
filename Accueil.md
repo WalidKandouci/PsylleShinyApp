@@ -4,23 +4,9 @@ Bienvenue sur le site ¨Psyllids pruni" ou nous mettons a disposition toutes les
 
 # Qui sommes nous ?
 
-| ![NicolasSauvion.jpg](www/NicolasSauvion.jpg) |
-|:--:|
-| <b>Image Credits - Fig.2 - 4K Mountains Wallpaper</b>|
-
 <p align="center">
   <img src=="www/NicolasSauvion.jpg"/>
 </p>
-
-<p>
-  <img src="www/NicolasSauvion.jpg" width="100" />
-  <img src="/www/WalidKandouci.jpg" width="100" /> 
-</p>
-<p>
-  <em>Nicolas Sauvion</em>
-  <em>Walid Kandouci</em>
-</p>
-
 
 En cliquant sur les onglets de gauches:
 
