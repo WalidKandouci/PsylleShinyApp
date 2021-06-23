@@ -5,7 +5,7 @@ Bienvenue sur le site ¨Psyllids pruni" ou nous mettons a disposition toutes les
 # Qui sommes nous ?
 
 <p align="center">
-  <img src=="www/NicolasSauvion.jpg"/>
+  <img src=="www/NicolasSauvion.jpg">
 </p>
 
 En cliquant sur les onglets de gauches:
