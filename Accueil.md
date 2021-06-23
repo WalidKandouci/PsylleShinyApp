@@ -4,7 +4,7 @@ Bienvenue sur le site ¨Psyllids pruni" ou nous mettons a disposition toutes les
 
 # Qui sommes nous ?
 
-<img src="(www/NicolasSauvion.jpg" width="100" height="100"> | <img src="(www/WalidKandouci.png" width="100" height="100">
+<img src="(www/NicolasSauvion.jpg" width="100" height="100"> | <img src="(https://github.com/WalidKandouci/PsylleShinyApp/blob/main/www/WalidKandouci.png" width="100" height="100">
 :-------------------------:|:-------------------------:
 |Nicolas Sauvion | Walid Kandouci|
 |Ingénieur de recherche | Etudiant master 2 Biostatistique|
