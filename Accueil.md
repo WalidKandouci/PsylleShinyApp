@@ -4,7 +4,7 @@ Bienvenue sur le site ¨Psyllids pruni" ou nous mettons a disposition toutes les
 
 # Qui sommes nous ?
 
-<img src="(NicolasSauvion.jpg" width="100" height="100"> | <img src="(WalidKandouci.png" width="100" height="100">
+![](www/NicolasSauvion.jpg)| ![](www/WalidKandouci.png")
 :-------------------------:|:-------------------------:
 |Nicolas Sauvion | Walid Kandouci|
 |Ingénieur de recherche | Etudiant master 2 Biostatistique|
@@ -20,3 +20,4 @@ En cliquant sur les onglets de gauches:
 * **Code R:** ici toutes les informations sur le modèle dis IPLM utilisé pour l'études du tos de développement de nos psylles en fonctions des température.
 * **Contact:** Moyen de contacter Nicoals Sauvion et Walid Kandouci.
 * **Sources:** liste d'articles publié par Nicolas Sauvion en relation avec nos psylles/
+
