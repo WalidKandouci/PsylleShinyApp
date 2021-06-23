@@ -4,11 +4,10 @@ Bienvenue sur le site ¨Psyllids pruni" ou nous mettons a disposition toutes les
 
 # Qui sommes nous ?
 
-<figure>
-<img src="www/NicolasSauvion.jpg" alt="Trulli" style="width:100%">
-<figcaption align = "center"><b>Nicolas Sauvion</b></figcaption>
-</figure>
-  
+| ![NicolasSauvion.jpg](www/NicolasSauvion.jpg) |
+|:--:|
+| <b>Image Credits - Fig.2 - 4K Mountains Wallpaper</b>|
+
 <p>
   <img src="www/NicolasSauvion.jpg" width="100" />
   <img src="/www/WalidKandouci.jpg" width="100" /> 
