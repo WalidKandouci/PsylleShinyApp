@@ -4,16 +4,15 @@ Bienvenue sur le site ¨Psyllids pruni" ou nous mettons a disposition toutes les
 
 # Qui sommes nous ?
 
-![image_caption](www/NicolasSauvion.jpg)
-*image_caption*
-
-
 <p>
   <img src="www/NicolasSauvion.jpg" width="100" />
-   <em>image_caption</em>
   <img src="/www/WalidKandouci.jpg" width="100" /> 
-   <em>image_caption</em>
 </p>
+<p>
+  <em>image_caption</em>
+  <em>image_caption</em>
+</p>
+
 
 En cliquant sur les onglets de gauches:
 
