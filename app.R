@@ -165,7 +165,7 @@ ui <- dashboardPage(
     ),
     dashboardBody(
         tabItems(
-                tabItem(tabName = "Home", includeHTML("Accueil.md")),
+                tabItem(tabName = "Home", includeMarkdown("Accueil.md")),
 #///////////////////////////////////////////////////////////////////////////////
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Gallery
