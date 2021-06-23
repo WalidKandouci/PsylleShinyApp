@@ -4,7 +4,7 @@
 
 # Bienvenu !
 
-Bienvenue sur le site ¨Psyllids pruni" ou nous mettons a disposition toutes les informations nécessaires sur nos psylles.
+Bienvenue sur le site **Psyl'risk** ou nous mettons a disposition toutes les informations nécessaires sur nos psylles.
  
 En cliquant sur les onglets de gauches:
 
