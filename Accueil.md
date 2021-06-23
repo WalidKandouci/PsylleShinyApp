@@ -4,9 +4,11 @@ Bienvenue sur le site ¨Psyllids pruni" ou nous mettons a disposition toutes les
 
 # Qui sommes nous ?
 
-Solarized dark             |  Solarized Ocean
+<img src="(NicolasSauvion.jpg" width="100" height="100"> | <img src="(WalidKandouci.png" width="100" height="100">
 :-------------------------:|:-------------------------:
-![](www/NicolasSauvion.jpg)  |  ![](www/WalidKandouci.png)
+|Nicolas Sauvion | Walid Kandouci|
+|Ingénieur de recherche | Etudiant master 2 Biostatistique|
+|INRA | Université Montpellier|
 
 En cliquant sur les onglets de gauches:
 
