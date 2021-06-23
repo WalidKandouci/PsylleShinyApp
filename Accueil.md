@@ -6,8 +6,9 @@ Bienvenue sur le site ¨Psyllids pruni" ou nous mettons a disposition toutes les
 
 <center>
 <p float="left">
-  <img src="www/NicolasSauvion.jpg" width="100" alt="{{ include.description }}"/>
-  <img src="/www/WalidKandouci.jpg" width="100" alt="{{ include.description }}"/> 
+  ![blabla](www/NicolasSauvion.jpg)
+  <img src="www/NicolasSauvion.jpg" width="100" />
+  <img src="/www/WalidKandouci.jpg" width="100" /> 
 </p>
 </center>
 
