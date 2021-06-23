@@ -9,8 +9,8 @@ Bienvenue sur le site ¨Psyllids pruni" ou nous mettons a disposition toutes les
   <img src="/www/WalidKandouci.jpg" width="100" /> 
 </p>
 <p>
-  <em>image_caption</em>
-  <em>image_caption</em>
+  <em>Nicolas Sauvion</em>
+  <em>Walid Kandouci</em>
 </p>
 
 
