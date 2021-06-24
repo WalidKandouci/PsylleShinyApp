@@ -62,19 +62,20 @@ ui <- dashboardPage(
             )),
             menuItem("Acceuil", tabName = "Home", icon = icon("home")),
             menuItem("Visualisation", tabName = "Visualization", icon = icon("chart-area")),
-            menuItem("Gallery", tabName = "Gallery", icon = icon("camera-retro")),
+            menuItem("Galerie", tabName = "Gallery", icon = icon("camera-retro")),
             menuItem("Maps", tabName = "Maps", icon = icon("map-marked-alt")),
             menuItem("Donnes meteo", tabName = "DataMeteoMontpellier", icon = icon("cloud-sun-rain")),
             menuItem("Donnes laboratoire (2005)", tabName = "data2005", icon = icon("file")),
-            menuItem("Code R", tabName = "CodeR", icon = icon("code")),
-            menuItem("About us", tabName = "AboutUs", icon = icon("question-circle")),
+            menuItem("Code R: IPLM Modele", tabName = "CodeR", icon = icon("code")),
+            menuItem("Nous contactez", tabName = "AboutUs", icon = icon("question-circle")),
             menuItem("Sources", tabName = "Sources", icon = icon("book"))
         )
     ),
     dashboardBody(
         tabItems(
-                tabItem(tabName = "Home", includeMarkdown("Accueil.md")),
-#///////////////////////////////////////////////////////////////////////////////
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Home
+tabItem(tabName = "Home", includeMarkdown("Accueil.md")),
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Gallery
 tabItem(tabName = "Gallery",
@@ -88,7 +89,7 @@ tabItem(tabName = "Visualization",
             tabBox(
                 width = NULL,
                 height = NULL,
-                tabPanel(""),
+                tabPanel("", includeMarkdown("Visualisation.md")),
                 tabPanel("Herault: Plot",          
                          plotlyOutput("plotyHerault", width = "1000px", height = "500px")      
                          ),
@@ -125,7 +126,7 @@ tabItem(tabName = "data2005",
             tabBox(
                 width = NULL,
                 height = NULL,
-                tabPanel(""),
+                tabPanel("",includeMarkdown("Labo.md")),
                 tabPanel("Donnees labratoire 2005",
                          sidebarLayout(
                              sidebarPanel(
@@ -146,13 +147,12 @@ tabItem(tabName = "data2005",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # MAP
 tabItem(
-    tabPanel(""),
     tabName = "Maps",
     fluidRow(
         tabBox(   
             width = NULL, 
             height = NULL,
-            tabPanel(""),
+            tabPanel("", includeMarkdown("Map.md")),
             tabPanel("Bassins",    
                      leafletOutput("mapBassins", width = "1500", height = "1000")),    
             tabPanel("Especes A et B",
@@ -167,7 +167,7 @@ tabItem(tabName = "DataMeteoMontpellier",
             tabBox(   
                 width = NULL,  
                 height = NULL, 
-                tabPanel(""),
+                tabPanel("", includeMarkdown("Meteo.md")),
                 tabPanel("Donnes meteo Montpellier",  
                          sidebarLayout(   
                              sidebarPanel(    
@@ -186,7 +186,16 @@ tabItem(tabName = "DataMeteoMontpellier",
                                
                 )               
             )                
-        )
+        ),
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Sources
+tabItem(tabName = "Sources", includeHTML("Docu.Rhtml")),
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Contact
+tabItem(tabName = "AboutUs", includeMarkdown("Contact.md")),
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# CodeR IPLM
+tabItem(tabName = "CodeR", includeMarkdown("CodeR.md"))
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     )))
 #*******************************************************************************
