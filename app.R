@@ -67,7 +67,7 @@ ui <- dashboardPage(
             menuItem("Donnes meteo", tabName = "DataMeteoMontpellier", icon = icon("cloud-sun-rain")),
             menuItem("Donnes laboratoire (2005)", tabName = "data2005", icon = icon("file")),
             menuItem("Code R: IPLM Modele", tabName = "CodeR", icon = icon("code")),
-            menuItem("Nous contactez", tabName = "AboutUs", icon = icon("question-circle")),
+            menuItem("Nous contactez", tabName = "AboutUs", icon = icon("user")),
             menuItem("Sources", tabName = "Sources", icon = icon("book"))
         )
     ),
@@ -89,23 +89,23 @@ tabItem(tabName = "Visualization",
             tabBox(
                 width = NULL,
                 height = NULL,
-                tabPanel("", includeMarkdown("Visualisation.md")),
-                tabPanel("Herault: Plot",          
+                tabPanel("", icon = icon("info-circle"),includeMarkdown("Visualisation.md")),
+                tabPanel("Herault: Plot",icon = icon("chart-area"),
                          plotlyOutput("plotyHerault", width = "1000px", height = "500px")      
                          ),
-                tabPanel("Pyrennes Orientales: Plot",          
+                tabPanel("Pyrennes Orientales: Plot",icon = icon("chart-area"),       
                          plotlyOutput("plotyPyrOr", width = "1000px", height = "500px")      
                 ),
-                tabPanel("Tarn et Garonne: Plot",          
+                tabPanel("Tarn et Garonne: Plot",icon = icon("chart-area"),         
                          plotlyOutput("plotyTarnGar", width = "1000px", height = "500px")      
                 ),
-                tabPanel("Drome: Plot",          
+                tabPanel("Drome: Plot",icon = icon("chart-area"),      
                          plotlyOutput("plotyDrome", width = "1000px", height = "500px")      
                 ),
-                tabPanel("Suisse: Plot",          
+                tabPanel("Suisse: Plot",icon = icon("chart-area"),    
                          plotlyOutput("plotySuisse", width = "1000px", height = "500px")      
                 ),
-                tabPanel("Donnees Terrain",          
+                tabPanel("Donnees Terrain", icon = icon("table"),       
                          sidebarLayout(
                              sidebarPanel(
                                  selectInput(
@@ -126,8 +126,8 @@ tabItem(tabName = "data2005",
             tabBox(
                 width = NULL,
                 height = NULL,
-                tabPanel("",includeMarkdown("Labo.md")),
-                tabPanel("Donnees labratoire 2005",
+                tabPanel("",icon = icon("info-circle"),includeMarkdown("Labo.md")),
+                tabPanel("Donnees labratoire 2005",icon = icon("table"),
                          sidebarLayout(
                              sidebarPanel(
                                  selectInput(
@@ -152,10 +152,10 @@ tabItem(
         tabBox(   
             width = NULL, 
             height = NULL,
-            tabPanel("", includeMarkdown("Map.md")),
-            tabPanel("Bassins",    
+            tabPanel("", icon = icon("info-circle"),includeMarkdown("Map.md")),
+            tabPanel("Bassins", icon = icon("map-marker-alt"),  
                      leafletOutput("mapBassins", width = "1500", height = "1000")),    
-            tabPanel("Especes A et B",
+            tabPanel("Especes A et B",icon = icon("map-marker-alt"),
                      leafletOutput("mapSpecies", width = "1500", height = "1000"))            
             )       
         )        
@@ -167,8 +167,8 @@ tabItem(tabName = "DataMeteoMontpellier",
             tabBox(   
                 width = NULL,  
                 height = NULL, 
-                tabPanel("", includeMarkdown("Meteo.md")),
-                tabPanel("Donnes meteo Montpellier",  
+                tabPanel("",icon = icon("info-circle"), includeMarkdown("Meteo.md")),
+                tabPanel("Donnes meteo Montpellier",icon = icon("table"),  
                          sidebarLayout(   
                              sidebarPanel(    
                                  selectInput(
@@ -179,9 +179,9 @@ tabItem(tabName = "DataMeteoMontpellier",
                              mainPanel(DT::dataTableOutput('MeteoMontpellierData'),)               
                          )               
                 ),
-                tabPanel("Plot Meteo Montpellier 2005 (temperature)",
+                tabPanel("Plot Meteo Montpellier 2005 (temperature)",icon = icon("chart-area"),
                          plotlyOutput("plotyplotMeteoTemp", width = "1000px", height = "500px")),       
-                tabPanel("Plot Meteo Montpellier 2005 (humidite)",
+                tabPanel("Plot Meteo Montpellier 2005 (humidite)",icon = icon("chart-area"),
                          plotlyOutput("plotyplotMeteoHumy", width = "1000px", height = "500px"))
                                
                 )               
