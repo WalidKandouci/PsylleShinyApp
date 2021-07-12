@@ -5,9 +5,9 @@ account: walidkandouci
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 4304868
-bundleId: 4751298
+bundleId: 4809431
 url: https://walidkandouci.shinyapps.io/PsylleShinyApp/
-when: 1624536085.80639
-lastSyncTime: 1624536085.80639
+when: 1626052818.99988
+lastSyncTime: 1626052818.99988
 asMultiple: FALSE
 asStatic: FALSE
