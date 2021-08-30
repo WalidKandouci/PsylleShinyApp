@@ -22,9 +22,9 @@ En cliquant sur les onglets de gauches:
 <p align="center">
  <img src="www/NicolasSauvion.jpg">
 </p>
-<p align="center">Nicolas Sauvion - Ingénieur de recherche à l'Inra<p align="center">
+<p align="center">Nicolas Sauvion - Ingénieur de recherche INRAE <p align="center">
 
 <p align="center">
  <img src="www/WalidKandouci.jpg">
 </p>
-<p align="center">Walid Kandouci - Étudiant en master biostatistique à l'université de Montpellier<p align="center">
+<p align="center">Walid Kandouci - Master 2 Biostatistique, Université Montpellier 2 <p align="center">
